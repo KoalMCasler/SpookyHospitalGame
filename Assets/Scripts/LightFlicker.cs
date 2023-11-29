@@ -21,7 +21,7 @@ public class LightFlicker : MonoBehaviour
         lightObject.SetActive(false);
         lightFixtureOff.SetActive(true);
         LightFixtureOn.SetActive(false);
-        yield return new WaitForSeconds(lightTimeOff);
+        yield return new WaitForSecondsRealtime(lightTimeOff);
         lightFixtureOff.SetActive(false);
         LightFixtureOn.SetActive(true);
         lightObject.SetActive(true);
