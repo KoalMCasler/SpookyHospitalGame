@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
@@ -27,6 +28,6 @@ public class MainMenu : MonoBehaviour
         crossFadeAnim.SetBool("Leave",true);
         yield return new WaitForSeconds(waitTime);
         crossFadeAnim.SetBool("Leave",false);
-        SceneManager.LoadScene(sceneBuildIndex);
+        SceneManager.LoadScene(sceneBuildIndex,LoadSceneMode.Single);
     }
 }

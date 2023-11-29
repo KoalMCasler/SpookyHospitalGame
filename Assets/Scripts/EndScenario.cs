@@ -13,6 +13,6 @@ public class EndScenario : MonoBehaviour
     private IEnumerator EndGame()
     {
         yield return new WaitForSecondsRealtime(waitTime);
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
 }
